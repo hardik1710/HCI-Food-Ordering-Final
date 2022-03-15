@@ -20,7 +20,7 @@ else
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Starter Template for Bootstrap</title>
+    <title>FoodPicky</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -175,15 +175,15 @@ only screen and (max-width: 760px),
 							<?php
 						if(empty($_SESSION["user_id"]))
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active">Login</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active">Signup</a> </li>';
 							}
 						else
 							{
 									
 									
-									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">Your Orders</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Logout</a> </li>';
 							}
 
 						?>
@@ -261,8 +261,8 @@ only screen and (max-width: 760px),
 							
 							  <th>Item</th>
 							  <th>Quantity</th>
-							  <th>price</th>
-							   <th>status</th>
+							  <th>Price</th>
+							   <th>Status</th>
 							     <th>Date</th>
 								   <th>Action</th>
 							  
@@ -300,7 +300,7 @@ only screen and (max-width: 760px),
 																			  }
 																			   if($status=="in process")
 																			 { ?>
-																				<button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin"  aria-hidden="true" ></span>On a Way!</button>
+																				<button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin"  aria-hidden="true" ></span>On the Way!</button>
 																			<?php
 																				}
 																			if($status=="closed")
@@ -314,7 +314,7 @@ only screen and (max-width: 760px),
 																			if($status=="rejected")
 																				{
 																			?>
-																			 <button type="button" class="btn btn-danger"> <i class="fa fa-close"></i>cancelled</button>
+																			 <button type="button" class="btn btn-danger"> <i class="fa fa-close"></i>Cancelled</button>
 																			<?php 
 																			} 
 																			?>
