@@ -67,16 +67,19 @@ session_start(); //start temp session until logout/browser closed
                 <div class="container text-center hero-text font-white">
                     <h1>Order Delivery & Take-Out </h1>
                     <h5 class="font-white space-xs">Find restaurants, specials, and coupons for free</h5>
+					<!-- piyush -->
+                    <!-- fOOD sEARCH Section Starts Here -->
                     <div class="banner-form">
-                        <form class="form-inline">
+                        <form class="form-inline" action="food-search.php" method="POST">
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                                 <div class="form-group">
                                     <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="I would like to eat...."> </div>
                             </div>
-                            <button onclick="location.href='restaurants.html'" type="button" class="btn theme-btn btn-lg">Search food</button>
+							<input type="submit" name="submit" value="Search food" class="btn theme-btn btn-lg">
                         </form>
                     </div>
+					<!-- fOOD sEARCH Section Ends Here -->
                     <div class="steps">
                         <div class="step-item step1">
                             <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 483 483" width="512" height="512">
@@ -122,7 +125,7 @@ session_start(); //start temp session until logout/browser closed
 				
 						<?php 
 						// fetch records from database to display popular first 3 dishes from table
-						$query_res= mysqli_query($db,"select * from dishes LIMIT 3"); 
+						$query_res= mysqli_query($db,"SELECT * FROM dishes ORDER BY RAND() LIMIT 3"); //piyush
 									      while($r=mysqli_fetch_array($query_res))
 										  {
 													
