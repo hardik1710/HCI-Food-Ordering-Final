@@ -74,7 +74,7 @@ session_start(); //start temp session until logout/browser closed
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-lg" id="exampleInputAmount" placeholder="I would like to eat...."> </div>
+                                    <input type="search" name="search" class="form-control form-control-lg" id="exampleInputAmount" placeholder="I would like to eat...."> </div>
                             </div>
 							<input type="submit" name="submit" value="Search food" class="btn theme-btn btn-lg">
                         </form>
