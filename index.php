@@ -70,7 +70,7 @@ session_start(); //start temp session until logout/browser closed
 					<!-- piyush -->
                     <!-- fOOD sEARCH Section Starts Here -->
                     <div class="banner-form">
-                        <form class="form-inline" action="food-search.php" method="POST">
+                        <form class="form-inline" action="restaurant-search.php" method="POST">
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
                                 <div class="form-group">
