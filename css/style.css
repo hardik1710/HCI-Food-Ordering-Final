@@ -91,7 +91,28 @@ hr {
     max-width: 1270px;
     width: 94%;
 }
+.img-responsive{
+    width: 100%;
+}
+.img-curve{
+    border-radius: 15px;
+}
 
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+.text-white{
+    color: white;
+}
+.text-black{
+    color:black;
+}
 
 /* Remove space from columns */
 
@@ -151,7 +172,6 @@ hr {
 }
 
 .custom-radio .custom-control-input:checked~.custom-control-indicator {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns="http: //www.w3.org/2000/svg" viewBox="0 0 8 8"%3E%3Cpath fill="%23fff" d="M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z"/%3E%3C/svg%3E")
 }
 
 .custom-control-input:active~.custom-control-indicator {
@@ -165,7 +185,7 @@ hr {
 }
 
 .custom-control-input:disabled~.custom-control-description {
-    color: #76767
+    color:#f5f5f5
 }
 
 .custom-control {
@@ -284,19 +304,19 @@ hr {
 }
 
 .b-l {
-    border-left: 1px solid #edeed
+     border-left: none
 }
 
 .b-r {
-    border-left: 1px solid #edeed
+    border-left: none
 }
 
 .b-t {
-    border-top: 1px solid #edeed
+    border-top: none
 }
 
 .b-b {
-    border-bottom: 1px solid #edeed
+    border-bottom: none
 }
 
 .b-b-0 {
@@ -835,9 +855,6 @@ hr {
     float: left;
 }
 
-@media (max-width: 543px) {
-    ...
-}
 
 @media (min-width: 544px) and (max-width: 767px) {
     .food-item-wrap .right-text {
@@ -897,7 +914,7 @@ hr {
 }
 
 @media (min-width: 1200px) {
-    ...
+    
 }
 
 
@@ -1128,7 +1145,7 @@ Steps
 }
 
 @media (min-width: 1200px) {
-    ...
+    
 }
 
 
@@ -2729,3 +2746,74 @@ a[aria-expanded=false] .fa-angle-down {
     padding: 0 5px;
     color: #3a3e47;
 }
+/* -- quantity box -- */
+
+.quantity {
+    display: inline-block; }
+   
+   .quantity .input-text.qty {
+    width: 35px;
+    height: 39px;
+    padding: 0 5px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #efefef;
+   }
+   
+   .quantity.buttons_added {
+    text-align: left;
+    position: relative;
+    white-space: nowrap;
+    vertical-align: top; }
+
+   /* CSS for Food SEarch Section */
+
+   .food-search{
+    background-image: url(../images/img/res.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10% 0;
+}
+
+.food-search input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+/* CSS for Food Menu */
+.food-menu{
+    background-color: #ececec;
+    padding: 4% 0;
+}
+.food-menu-box{
+    width: 43%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.food-menu-img{
+    width: 20%;
+    float: left;
+}
+
+.food-menu-desc{
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food-price{
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.food-detail{
+    font-size: 1rem;
+    color: #747d8c;
+}
+
