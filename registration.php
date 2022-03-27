@@ -13,7 +13,11 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 		empty($_POST['phone'])||
 		empty($_POST['password'])||
 		empty($_POST['cpassword']) ||
-		empty($_POST['cpassword']))
+		empty($_POST['cpassword']) ||
+        empty($_POST['creditcard']) ||
+        empty($_POST['creditmonth']) ||
+        empty($_POST['credityear']) ||
+        empty($_POST['CVV']))
 		{
 			$message = "All fields must be Required!";
 		}
@@ -49,10 +53,26 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
      {
     	$message = 'Email Already exists!';
      }
-	else{
-       
+    elseif(strlen($_POST['creditcard']) != 16)  //credit card password length
+    {
+        $message = "credit card number Must be = 16";
+    }
+    elseif(strlen($_POST['creditmonth']) != 2)  //credit card password length
+    {
+        $message = "creditmonth Must be = 2";
+    }
+    elseif(strlen($_POST['credityear']) != 2)  //credit card password length
+    {
+        $message = "credityear Must be = 2";
+    }
+    elseif(strlen($_POST['CVV']) != 3)  //credit card password length
+    {
+        $message = "CVV Must be = 3";
+    }
+    else{
+
 	 //inserting values into db
-	$mql = "INSERT INTO users(username,f_name,l_name,email,phone,password,address) VALUES('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['phone']."','".md5($_POST['password'])."','".$_POST['address']."')";
+	$mql = "INSERT INTO users(username,f_name,l_name,email,phone,password,address,credit_card,credit_month,credit_year,CVV) VALUES('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['phone']."','".md5($_POST['password'])."','".$_POST['address']."','".$_POST['creditcard']."','".$_POST['creditmonth']."','".$_POST['credityear']."','".$_POST['CVV']."')";
 	mysqli_query($db, $mql);
 		$success = "Account Created successfully! <p>You will be redirected in <span id='counter'>5</span> second(s).</p>
 														<script type='text/javascript'>
@@ -168,27 +188,47 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                                        <label for="exampleInputEmail1">Last Name</label>
                                        <input class="form-control" type="text" name="lastname" id="example-text-input-2" placeholder="Last Name"> 
                                     </div>
-                                    <div class="form-group col-sm-6">
+                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Email address</label>
                                        <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
+                                     </div>
+                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputEmail1">Phone number</label>
-                                       <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your email with anyone else.</small> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
+                                       <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your phone number with anyone else.</small>
+                                     </div>
+                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputPassword1">Password</label>
                                        <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password"> 
-                                    </div>
-                                    <div class="form-group col-sm-6">
+                                     </div>
+                                     <div class="form-group col-sm-6">
                                        <label for="exampleInputPassword1">Repeat password</label>
                                        <input type="password" class="form-control" name="cpassword" id="exampleInputPassword2" placeholder="Password"> 
-                                    </div>
-									 <div class="form-group col-sm-12">
+                                     </div>
+                                     <div class="form-group col-sm-12">
                                        <label for="exampleTextarea">Delivery Address</label>
                                        <textarea class="form-control" id="exampleTextarea"  name="address" rows="3"></textarea>
-                                    </div>
-                                   
+                                     </div>
+                                     <div class="form-group col-sm-12">
+
+                                         <label for="exampleTextarea">----------------------------------Add The Payment Method For Faster Checkout----------------------------------</label>
+
+                                     </div>
+                                     <div class="form-group col-sm-12">
+                                         <label for="exampleTextarea">Payment</label>
+                                         <input class="form-control" type="text" name="creditcard" id="example-text-input"   placeholder="Credit Card Number">
+                                     </div>
+                                     <div class="form-group col-sm-4">
+                                         <label for="exampleInputEmail1">Month</label>
+                                         <input class="form-control" type="text" name="creditmonth" id="example-text-input" placeholder="Month (2 digits)">
+                                     </div>
+                                     <div class="form-group col-sm-4">
+                                         <label for="exampleInputEmail1">Year</label>
+                                         <input class="form-control" type="text" name="credityear" id="example-text-input" placeholder="Year (2 digits)">
+                                     </div>
+                                     <div class="form-group col-sm-4">
+                                         <label for="exampleInputEmail1">CVV</label>
+                                         <input class="form-control" type="text" name="CVV" id="example-text-input" placeholder="CVV (3 digits)">
+                                     </div>
                                  </div>
                                 
                                  <div class="row">
