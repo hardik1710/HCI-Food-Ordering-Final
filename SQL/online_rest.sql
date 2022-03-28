@@ -246,6 +246,10 @@ CREATE TABLE IF NOT EXISTS `users` (
   `phone` varchar(222) NOT NULL,
   `password` varchar(222) NOT NULL,
   `address` text NOT NULL,
+  `credit_card` varchar(222) NOT NULL,
+  `credit_month` varchar(222) NOT NULL,
+  `credit_year` varchar(222) NOT NULL,
+  `CVV` varchar(222) NOT NULL,
   `status` int(222) NOT NULL DEFAULT '1',
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`u_id`)
@@ -255,11 +259,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`u_id`, `username`, `f_name`, `l_name`, `email`, `phone`, `password`, `address`, `status`, `date`) VALUES
-(33, 'Piyush', 'Piyush', 'Adya', 'Piyushadya52@gmail.com', '6479044624', 'acbd9ab2f68bea3f5291f825416546a1', '55-50 chapman court', 1, '2022-02-17 19:58:19'),
-(34, 'HARDIK', 'HARDIK', 'SACHDEVA', 'HGAHDSGSAHD@gmail.com', '4379881654', 'e10adc3949ba59abbe56e057f20f883e', 'chapman ct', 1, '2022-02-17 20:48:15'),
-(35, 'hardik1710', 'Hardik', 'Sachdeva', 'sachdeva.hardik@gmail.com', '4379881522', 'fcea920f7412b5da7be0cf42b8c93759', '50 Chapman Ct', 1, '2022-02-18 03:43:15'),
-(36, 'hardik_', 'HARDIK', 'SACHDEVA', 's@gmail.com', '+917838201522', 'e19d5cd5af0378da05f63f891c7467af', '767,POCKET-E\r\nMAYUR VIHAR PHASE - 2', 1, '2022-03-09 18:17:54');
+INSERT INTO `users` (`u_id`, `username`, `f_name`, `l_name`, `email`, `phone`, `password`, `address`,`credit_card`,`credit_month`,`credit_year`,`CVV`, `status`, `date`) VALUES
+(33, 'Piyush', 'Piyush', 'Adya', 'Piyushadya52@gmail.com', '6479044624', 'acbd9ab2f68bea3f5291f825416546a1', '55-50 chapman court', '1111111111111111', '01', '22', '111', 1, '2022-02-17 19:58:19'),
+(34, 'HARDIK', 'HARDIK', 'SACHDEVA', 'HGAHDSGSAHD@gmail.com', '4379881654', 'e10adc3949ba59abbe56e057f20f883e', 'chapman ct', '1111111111111111', '01', '22', '111', 1, '2022-02-17 20:48:15'),
+(35, 'hardik1710', 'Hardik', 'Sachdeva', 'sachdeva.hardik@gmail.com', '4379881522', 'fcea920f7412b5da7be0cf42b8c93759', '50 Chapman Ct', '1111111111111111', '01', '22', '111', 1, '2022-02-18 03:43:15'),
+(36, 'hardik_', 'HARDIK', 'SACHDEVA', 's@gmail.com', '+917838201522', 'e19d5cd5af0378da05f63f891c7467af', '767,POCKET-E\r\nMAYUR VIHAR PHASE - 2', '1111111111111111', '01', '22', '111', 1, '2022-03-09 18:17:54');
 
 -- --------------------------------------------------------
 
@@ -274,6 +278,11 @@ CREATE TABLE IF NOT EXISTS `users_orders` (
   `title` varchar(222) NOT NULL,
   `quantity` int(222) NOT NULL,
   `price` decimal(10,2) NOT NULL,
+  `address` text NOT NULL,
+  `credit_card` varchar(222) NOT NULL,
+  `credit_month` varchar(222) NOT NULL,
+  `credit_year` varchar(222) NOT NULL,
+  `CVV` varchar(222) NOT NULL,
   `status` varchar(222) DEFAULT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`o_id`)
@@ -283,9 +292,9 @@ CREATE TABLE IF NOT EXISTS `users_orders` (
 -- Dumping data for table `users_orders`
 --
 
-INSERT INTO `users_orders` (`o_id`, `u_id`, `title`, `quantity`, `price`, `status`, `date`) VALUES
-(37, 31, 'jklmno', 5, '17.99', 'closed', '2018-04-18 19:51:50'),
-(38, 31, 'Red Robins Chick on a Stick', 2, '34.99', NULL, '2018-04-18 19:52:34');
+INSERT INTO `users_orders` (`o_id`, `u_id`, `title`, `quantity`, `price`, `status`, `date`, `address`,`credit_card`,`credit_month`,`credit_year`,`CVV`) VALUES
+(37, 31, 'jklmno', 5, '17.99', 'closed', '2018-04-18 19:51:50', '55-50 chapman court', '1111111111111111', '01', '22', '111'),
+(38, 31, 'Red Robins Chick on a Stick', 2, '34.99', NULL, '2018-04-18 19:52:34', '55-50 chapman court', '1111111111111111', '01', '22', '111');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
