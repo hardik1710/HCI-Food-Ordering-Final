@@ -20,15 +20,15 @@ else{
 													if($_POST['submit'])
 													{
 
-													$SQL="insert into users_orders(random_id,u_id,title,quantity,price) values('".$_SESSION["random_id"]."','".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."')";
+						
+													$SQL="insert into users_orders(u_id,title,quantity,price,address,credit_card,credit_month,credit_year,CVV,random_id) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."','".$_POST['naddress']."','".$_POST['ncreditcard']."','".$_POST['ncreditmonth']."','".$_POST['ncredityear']."','".$_POST['nCVV']."','".$_SESSION["random_id"]."')";
 						
 														mysqli_query($db,$SQL);
-														 header("refresh:1;url=confirmation.php");
+														
+														header("refresh:1;url=confirmation.php");
 														$_SESSION["cart_item"]=null;
-
-
 													}else{
-
+                                  //Do Nothing
 													}
 												}
 ?>
@@ -45,7 +45,7 @@ else{
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Starter Template for Bootstrap</title>
+    <title>869ToGo.com</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -102,6 +102,13 @@ else{
                 </div>
             </div>
 			
+                /*<div class="container">
+                 
+					   <span style="color:green;">
+								<?php echo $success; ?>
+										</span>
+					
+                </div>*/
 
             
 			
