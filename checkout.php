@@ -20,7 +20,7 @@ else{
 													if($_POST['submit'])
 													{
 						
-													$SQL="insert into users_orders(u_id,title,quantity,price) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."')";
+													$SQL="insert into users_orders(u_id,title,quantity,price,address,credit_card,credit_month,credit_year,CVV) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."','".$_POST['naddress']."','".$_POST['ncreditcard']."','".$_POST['ncreditmonth']."','".$_POST['ncredityear']."','".$_POST['nCVV']."')";
 						
 														mysqli_query($db,$SQL);
 														
@@ -38,6 +38,9 @@ else{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
@@ -149,17 +152,33 @@ else{
                                         </div>
                                     </div>
                                     <!--cart summary-->
-                                    <div class="payment-option">
+                                    <div class="payment-address">
                                         <ul class=" list-unstyled">
-                                            <li>
-                                                <label class="custom-control custom-radio  m-b-20">
-                                                    <input name="mod" id="radioStacked1" checked value="COD" type="radio" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Payment on delivery</span>
-                                                    <br> <span>Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</span> </label>
-                                            </li>
-                                            <li>
-                                                <label class="custom-control custom-radio  m-b-10">
-                                                    <input name="mod"  type="radio" value="paypal" disabled class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description">Paypal <img src="images/paypal.jpg" alt="" width="90"></span> </label>
-                                            </li>
+                                            <div class="form-group col-sm-12">
+                                                <label for="exampleTextarea">Delivery Address</label>
+                                                <textarea class="form-control" id="exampleTextarea"  name="naddress" rows="3"></textarea>
+                                            </div>
+
+                                            <div class="form-group col-sm-12">
+                                                <label for="exampleTextarea">----------------------------------------------------------------Add The Payment Method For Checkout----------------------------------------------------------------</label>
+                                            </div>
+                                            <div class="form-group col-sm-12">
+                                                <label for="exampleTextarea">Payment</label>
+                                                <input class="form-control" type="text" name="ncreditcard" id="example-text-input"   placeholder="Credit Card Number">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="exampleInputEmail1">Month</label>
+                                                <input class="form-control" type="text" name="ncreditmonth" id="example-text-input" placeholder="Month (2 digits)">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="exampleInputEmail1">Year</label>
+                                                <input class="form-control" type="text" name="ncredityear" id="example-text-input" placeholder="Year (2 digits)">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="exampleInputEmail1">CVV</label>
+                                                <input class="form-control" type="text" name="nCVV" id="example-text-input" placeholder="CVV (3 digits)">
+                                            </div>
+                                    </div>
                                         </ul>
                                         <p class="text-xs-center"> <input type="submit" onclick="return confirm('Are you sure?');" name="submit"  class="btn btn-outline-success btn-block" value="Order now"> </p>
                                     </div>
@@ -234,47 +253,47 @@ else{
                                 <li><a href="#">Add to cart</a> </li>
                             </ul>
                         </div>
-                        <div class="col-xs-12 col-sm-3 popular-locations color-gray">
-                            <h5>Popular locations</h5>
-                            <ul>
-                                <li><a href="#">Sarajevo</a> </li>
-                                <li><a href="#">Split</a> </li>
-                                <li><a href="#">Tuzla</a> </li>
-                                <li><a href="#">Sibenik</a> </li>
-                                <li><a href="#">Zagreb</a> </li>
-                                <li><a href="#">Brcko</a> </li>
-                                <li><a href="#">Beograd</a> </li>
-                                <li><a href="#">New York</a> </li>
-                                <li><a href="#">Gradacac</a> </li>
-                                <li><a href="#">Los Angeles</a> </li>
-                            </ul>
-                        </div>
+<!--                        <div class="col-xs-12 col-sm-3 popular-locations color-gray">-->
+<!--                            <h5>Popular locations</h5>-->
+<!--                            <ul>-->
+<!--                                <li><a href="#">Sarajevo</a> </li>-->
+<!--                                <li><a href="#">Split</a> </li>-->
+<!--                                <li><a href="#">Tuzla</a> </li>-->
+<!--                                <li><a href="#">Sibenik</a> </li>-->
+<!--                                <li><a href="#">Zagreb</a> </li>-->
+<!--                                <li><a href="#">Brcko</a> </li>-->
+<!--                                <li><a href="#">Beograd</a> </li>-->
+<!--                                <li><a href="#">New York</a> </li>-->
+<!--                                <li><a href="#">Gradacac</a> </li>-->
+<!--                                <li><a href="#">Los Angeles</a> </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
                     </div>
                     <!-- top footer ends -->
                     <!-- bottom footer statrs -->
-                    <div class="row bottom-footer">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-3 payment-options color-gray">
-                                    <h5>Payment Options</h5>
-                                    <ul>
-                                        <li>
-                                            <a href="#"> <img src="images/paypal.png" alt="Paypal"> </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"> <img src="images/mastercard.png" alt="Mastercard"> </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"> <img src="images/maestro.png" alt="Maestro"> </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"> <img src="images/stripe.png" alt="Stripe"> </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"> <img src="images/bitcoin.png" alt="Bitcoin"> </a>
-                                        </li>
-                                    </ul>
-                                </div>
+<!--                    <div class="row bottom-footer">-->
+<!--                        <div class="container">-->
+<!--                            <div class="row">-->
+<!--                                <div class="col-xs-12 col-sm-3 payment-options color-gray">-->
+<!--                                    <h5>Payment Options</h5>-->
+<!--                                    <ul>-->
+<!--                                        <li>-->
+<!--                                            <a href="#"> <img src="images/paypal.png" alt="Paypal"> </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="#"> <img src="images/mastercard.png" alt="Mastercard"> </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="#"> <img src="images/maestro.png" alt="Maestro"> </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="#"> <img src="images/stripe.png" alt="Stripe"> </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="#"> <img src="images/bitcoin.png" alt="Bitcoin"> </a>-->
+<!--                                        </li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
                                 <div class="col-xs-12 col-sm-4 address color-gray">
                                     <h5>Address</h5>
                                     <p>Concept design of oline food order and deliveye,planned as restaurant directory</p>
