@@ -31,7 +31,7 @@ session_start(); //start temp session until logout/browser closed
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.php"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                                        <a class="navbar-brand" href="index.php"> <img style="background-color:white" width="110"  height="40" class="img-rounded " src="images/869ToGocom_Logo_PNG-1030x515.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -85,7 +85,7 @@ session_start(); //start temp session until logout/browser closed
             ?>
 
 
-            <h2>Restaurants on Your Search <a href="#" class="text-white">"<?php echo $search; ?>"</a></h2>
+            <h2 class="text-white">Restaurants on Your Search <a href="#" style="color:green">"<?php echo $search; ?>"</a></h2>
 
         </div>
     </section>
