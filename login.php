@@ -21,7 +21,9 @@
   
 </head>
 
-<body>
+<body style="background-image: url('images/background.jpg');  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;">
 <?php
 include("connection/connect.php"); //INCLUDE CONNECTION
 error_reporting(0); // hide undefine index errors
@@ -39,6 +41,8 @@ if(isset($_POST['submit']))   // if button is submit
 	
 	                        if(is_array($row))  // if matching records in the array & if everything is right
 								{
+
+                                        $_SESSION["random_id"] = rand();
                                     	$_SESSION["user_id"] = $row['u_id']; // put user id into temp session
 										 header("refresh:1;url=index.php"); // redirect to index.php page
 	                            } 
@@ -56,17 +60,16 @@ if(isset($_POST['submit']))   // if button is submit
 <!-- Input Mixin-->
 <!-- Button Mixin-->
 <!-- Pen Title-->
-<div class="pen-title">
-  <h1>Login Form</h1>
-</div>
+
 <!-- Form Module-->
-<div class="module form-module">
+<div class="module form-module" style="margin-top:100px">
   <div class="toggle">
-   
+
   </div>
-  <div class="form">
-    <h2>Login to your account</h2>
-	  <span style="color:red;"><?php echo $message; ?></span> 
+
+  <div class="form" >
+<h2 style="text-align:center">LOGIN FORM</h2>
+	  <span style="color:red;"><?php echo $message; ?></span>
    <span style="color:green;"><?php echo $success; ?></span>
     <form action="" method="post">
       <input type="text" placeholder="Username"  name="username"/>
