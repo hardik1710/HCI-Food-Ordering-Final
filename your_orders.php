@@ -243,7 +243,7 @@ only screen and (max-width: 760px),
 						$query_res= mysqli_query($db,"SELECT * FROM users_orders WHERE random_id in (SELECT random_id FROM users_orders GROUP BY random_id HAVING COUNT(random_id) >= 1)");
 												if(!mysqli_num_rows($query_res) > 0 )
 														{
-															echo '<td colspan="6"><center>You have no orders placed yet. </center></td>';
+															echo '<td colspan="8"><center>You have no orders placed yet. </center></td>';
 														}
 													else
 														{			      
