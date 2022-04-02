@@ -59,7 +59,7 @@ function orderConfirmed(){
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                                 <a class="navbar-brand" href="index.php"> <img style="background-color:white" width="110"  height="40" class="img-rounded " src="images/869ToGocom_Logo_PNG-1030x515.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -118,10 +118,11 @@ function orderConfirmed(){
                                     <figure><?php echo '<img src="admin/Res_img/' . $rows['image'] . '" alt="Restaurant logo">'; ?></figure>
                                 </div>
                             </div>
+                          
+                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc" style="text-align:right">
 
-                            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 profile-desc">
                                 <div class="pull-left right-text white-txt">
-                                    <h6><a href="#"><?php echo $rows['title']; ?></a></h6>
+                                    <h6><a href="#" style=";font-size:40px"><?php echo $rows['title']; ?></a></h6>
                                     <p><?php echo $rows['address']; ?></p>
                                     <ul class="nav nav-inline">
                                         <li class="nav-item"> <a class="nav-link active" href="#"><i class="fa fa-check"></i> Min $ 10,00</a> </li>
@@ -145,7 +146,7 @@ function orderConfirmed(){
                 </div>
             </section>
             <!-- end:Inner page hero -->
-            <div class="breadcrumb">
+            <div class="breadcrumb" width="200">
                 <div class="container">
 
                 </div>
@@ -349,57 +350,6 @@ function orderConfirmed(){
 
 
 
-                    </div>
-                    <!-- end:Collapse -->
-                </div>
-                <!-- end:Widget menu -->
-
-            </div>
-            <!-- end:Bar -->
-            <div class="col-xs-12 col-md-12 col-lg-3">
-                <div class="sidebar-wrap">
-                    <div class="widget clearfix">
-                        <!-- /widget heading -->
-                        <div class="widget-heading">
-                            <h3 class="widget-title text-dark">
-                                Popular tags
-                            </h3>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="widget-body">
-                            <ul class="tags">
-                                <li> <a href="#" class="tag">
-                                        Coupons
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Discounts
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Deals
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Amazon
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Ebay
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Fashion
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Shoes
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Kids
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Travel
-                                    </a> </li>
-                                <li> <a href="#" class="tag">
-                                        Hosting
-                                    </a> </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
