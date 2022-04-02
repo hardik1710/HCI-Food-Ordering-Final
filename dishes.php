@@ -166,10 +166,11 @@ function orderConfirmed(){
                             </div>
                             <div class="order-row bg-white">
                                 <div class="widget-body">
-
-
-
-
+<?php
+$item_total = 0;
+foreach ($_SESSION["cart_item"] as $item)  // fetch items define current into session ID
+{
+?>
                                     <div class="title-row">
                                         <?php echo $item["title"]; ?><a href="dishes.php?res_id=<?php echo $_GET['res_id']; ?>&action=remove&id=<?php echo $item["d_id"]; ?>">
                                             <i class="fa fa-trash pull-right"></i></a>
@@ -185,7 +186,10 @@ function orderConfirmed(){
                                         </div>
 
                                     </div>
-
+<?php
+$item_total += ($item["price"]*$item["quantity"]); // calculating current price into cart
+}
+?>
 
 
 
