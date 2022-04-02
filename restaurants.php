@@ -29,7 +29,7 @@ session_start();
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.php"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                                       <a class="navbar-brand" href="index.php"> <img style="background-color:white" width="110"  height="40" class="img-rounded " src="images/869ToGocom_Logo_PNG-1030x515.png" alt=""> </a>
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -130,7 +130,7 @@ session_start();
 														<div class="restaurant-wrap">
 															<div class="row">
 																<div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-																	<a class="restaurant-logo" href="dishes.php?res_id='.$rows['rs_id'].'" > <img src="admin/Res_img/'.$rows['image'].'" alt="Restaurant logo"> </a>
+																	<a class="restaurant-logo" href="dishes.php?res_id='.$rows['rs_id'].'" > <img width="500" height="500" src="admin/Res_img/'.$rows['image'].'" alt="Restaurant logo"> </a>
 																</div>
 																<!--end:col -->
 																<div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
