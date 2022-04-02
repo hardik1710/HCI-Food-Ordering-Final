@@ -19,6 +19,7 @@ else{
 												
 													if($_POST['submit'])
 													{
+
 						
 													$SQL="insert into users_orders(u_id,title,quantity,price,address,credit_card,credit_month,credit_year,CVV,random_id) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."','".$_POST['naddress']."','".$_POST['ncreditcard']."','".$_POST['ncreditmonth']."','".$_POST['ncredityear']."','".$_POST['nCVV']."','".$_SESSION["random_id"]."')";
 						
@@ -26,9 +27,8 @@ else{
 														
 														header("refresh:1;url=confirmation.php");
 														$_SESSION["cart_item"]=null;
-
-														
-														
+													}else{
+                                  //Do Nothing
 													}
 												}
 ?>
@@ -62,7 +62,7 @@ else{
             <nav class="navbar navbar-dark">
                 <div class="container">
                     <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#mainNavbarCollapse">&#9776;</button>
-                    <a class="navbar-brand" href="index.html"> <img class="img-rounded" src="images/food-picky-logo.png" alt=""> </a>
+                                      <a class="navbar-brand" href="index.php"> <img style="background-color:white" width="110"  height="40" class="img-rounded " src="images/869ToGocom_Logo_PNG-1030x515.png" alt=""> </a>s
                     <div class="collapse navbar-toggleable-md  float-lg-right" id="mainNavbarCollapse">
                         <ul class="nav navbar-nav">
                             <li class="nav-item"> <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a> </li>
@@ -109,6 +109,7 @@ else{
 										</span>
 					
                 </div>*/
+
             
 			
 			
