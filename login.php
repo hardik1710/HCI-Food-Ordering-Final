@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>login</title>
+  <title>Login</title>
   
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 
@@ -74,7 +74,7 @@ if(isset($_POST['submit']))   // if button is submit
     <form action="" method="post">
       <input type="text" placeholder="Username"  name="username"/>
       <input type="password" placeholder="Password" name="password"/>
-      <input type="submit" id="buttn" name="submit" value="login" />
+      <input type="submit" id="buttn" name="submit" value="Login" />
     </form>
   </div>
   

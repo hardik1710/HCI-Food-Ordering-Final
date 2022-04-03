@@ -14,7 +14,7 @@ session_start(); //start temp session until logout/browser closed
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Starter Template for Bootstrap</title>
+    <title>869ToGo.com</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -48,8 +48,8 @@ session_start(); //start temp session until logout/browser closed
 							{
 									//if user is login
 									
-									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+									echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">Your Orders</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Logout</a> </li>';
 							}
 
 						?>
@@ -100,7 +100,7 @@ session_start(); //start temp session until logout/browser closed
                         <div class="step-item step3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewbox="0 0 612.001 612">
                                 <path d="M604.131 440.17h-19.12V333.237c0-12.512-3.776-24.787-10.78-35.173l-47.92-70.975a62.99 62.99 0 0 0-52.169-27.698h-74.28c-8.734 0-15.737 7.082-15.737 15.738v225.043h-121.65c11.567 9.992 19.514 23.92 21.796 39.658H412.53c4.563-31.238 31.475-55.396 63.972-55.396 32.498 0 59.33 24.158 63.895 55.396h63.735c4.328 0 7.869-3.541 7.869-7.869V448.04c-.001-4.327-3.541-7.87-7.87-7.87zM525.76 312.227h-98.044a7.842 7.842 0 0 1-7.868-7.869v-54.372c0-4.328 3.541-7.869 7.868-7.869h59.724c2.597 0 4.957 1.259 6.452 3.305l38.32 54.451c3.619 5.194-.079 12.354-6.452 12.354zM476.502 440.17c-27.068 0-48.943 21.953-48.943 49.021 0 26.99 21.875 48.943 48.943 48.943 26.989 0 48.943-21.953 48.943-48.943 0-27.066-21.954-49.021-48.943-49.021zm0 73.495c-13.535 0-24.472-11.016-24.472-24.471 0-13.535 10.937-24.473 24.472-24.473 13.533 0 24.472 10.938 24.472 24.473 0 13.455-10.938 24.471-24.472 24.471zM68.434 440.17c-4.328 0-7.869 3.543-7.869 7.869v23.922c0 4.328 3.541 7.869 7.869 7.869h87.971c2.282-15.738 10.229-29.666 21.718-39.658H68.434v-.002zm151.864 0c-26.989 0-48.943 21.953-48.943 49.021 0 26.99 21.954 48.943 48.943 48.943 27.068 0 48.943-21.953 48.943-48.943.001-27.066-21.874-49.021-48.943-49.021zm0 73.495c-13.534 0-24.471-11.016-24.471-24.471 0-13.535 10.937-24.473 24.471-24.473s24.472 10.938 24.472 24.473c0 13.455-10.938 24.471-24.472 24.471zm117.716-363.06h-91.198c4.485 13.298 6.846 27.54 6.846 42.255 0 74.28-60.431 134.711-134.711 134.711-13.535 0-26.675-2.045-39.029-5.744v86.949c0 4.328 3.541 7.869 7.869 7.869h265.96c4.329 0 7.869-3.541 7.869-7.869V174.211c-.001-13.062-10.545-23.606-23.606-23.606zM118.969 73.866C53.264 73.866 0 127.129 0 192.834s53.264 118.969 118.969 118.969 118.97-53.264 118.97-118.969-53.265-118.968-118.97-118.968zm0 210.864c-50.752 0-91.896-41.143-91.896-91.896s41.144-91.896 91.896-91.896c50.753 0 91.896 41.144 91.896 91.896 0 50.753-41.143 91.896-91.896 91.896zm35.097-72.488c-1.014 0-2.052-.131-3.082-.407L112.641 201.5a11.808 11.808 0 0 1-8.729-11.396v-59.015c0-6.516 5.287-11.803 11.803-11.803 6.516 0 11.803 5.287 11.803 11.803v49.971l29.614 7.983c6.294 1.698 10.02 8.177 8.322 14.469-1.421 5.264-6.185 8.73-11.388 8.73z" fill="#FFF" /> </svg>
-                            <h4><span>3. </span>Delivery or take out</h4> </div>
+                            <h4><span>3. </span>Delivery</h4> </div>
                         <!-- end:Step -->
                     </div>
                     <!-- end:Steps -->
@@ -134,7 +134,6 @@ session_start(); //start temp session until logout/browser closed
 															<div class="figure-wrap bg-image" data-image-src="admin/Res_img/dishes/'.$r['img'].'">
 																<div class="distance"><i class="fa fa-pin"></i>1240m</div>
 																<div class="rating pull-left"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-																<div class="review pull-right"><a href="#">198 reviews</a> </div>
 															</div>
 															<div class="content">
 																<h5><a href="dishes.php?res_id='.$r['rs_id'].'">'.$r['title'].'</a></h5>
@@ -183,7 +182,7 @@ session_start(); //start temp session until logout/browser closed
                                         </svg>
                                     </div>
                                     <h3>Choose a restaurant</h3>
-                                    <p>We"ve got your covered with menus from over 345 delivery restaurants online.</p>
+                                    <p>We"ve got you covered with menus from delivery restaurants online.</p>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +195,7 @@ session_start(); //start temp session until logout/browser closed
                                     </svg>
                                 </div>
                                 <h3>Choose a tasty dish</h3>
-                                <p>We"ve got your covered with menus from over 345 delivery restaurants online.</p>
+                                <p>Choose tasty dishes from our delivery restaurants menu online.</p>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 how-it-works-steps white-txt col3">
@@ -205,104 +204,17 @@ session_start(); //start temp session until logout/browser closed
                                     <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewbox="0 0 612.001 612">
                                         <path d="M604.131 440.17h-19.12V333.237c0-12.512-3.776-24.787-10.78-35.173l-47.92-70.975a62.99 62.99 0 0 0-52.169-27.698h-74.28c-8.734 0-15.737 7.082-15.737 15.738v225.043h-121.65c11.567 9.992 19.514 23.92 21.796 39.658H412.53c4.563-31.238 31.475-55.396 63.972-55.396 32.498 0 59.33 24.158 63.895 55.396h63.735c4.328 0 7.869-3.541 7.869-7.869V448.04c-.001-4.327-3.541-7.87-7.87-7.87zM525.76 312.227h-98.044a7.842 7.842 0 0 1-7.868-7.869v-54.372c0-4.328 3.541-7.869 7.868-7.869h59.724c2.597 0 4.957 1.259 6.452 3.305l38.32 54.451c3.619 5.194-.079 12.354-6.452 12.354zM476.502 440.17c-27.068 0-48.943 21.953-48.943 49.021 0 26.99 21.875 48.943 48.943 48.943 26.989 0 48.943-21.953 48.943-48.943 0-27.066-21.954-49.021-48.943-49.021zm0 73.495c-13.535 0-24.472-11.016-24.472-24.471 0-13.535 10.937-24.473 24.472-24.473 13.533 0 24.472 10.938 24.472 24.473 0 13.455-10.938 24.471-24.472 24.471zM68.434 440.17c-4.328 0-7.869 3.543-7.869 7.869v23.922c0 4.328 3.541 7.869 7.869 7.869h87.971c2.282-15.738 10.229-29.666 21.718-39.658H68.434v-.002zm151.864 0c-26.989 0-48.943 21.953-48.943 49.021 0 26.99 21.954 48.943 48.943 48.943 27.068 0 48.943-21.953 48.943-48.943.001-27.066-21.874-49.021-48.943-49.021zm0 73.495c-13.534 0-24.471-11.016-24.471-24.471 0-13.535 10.937-24.473 24.471-24.473s24.472 10.938 24.472 24.473c0 13.455-10.938 24.471-24.472 24.471zm117.716-363.06h-91.198c4.485 13.298 6.846 27.54 6.846 42.255 0 74.28-60.431 134.711-134.711 134.711-13.535 0-26.675-2.045-39.029-5.744v86.949c0 4.328 3.541 7.869 7.869 7.869h265.96c4.329 0 7.869-3.541 7.869-7.869V174.211c-.001-13.062-10.545-23.606-23.606-23.606zM118.969 73.866C53.264 73.866 0 127.129 0 192.834s53.264 118.969 118.969 118.969 118.97-53.264 118.97-118.969-53.265-118.968-118.97-118.968zm0 210.864c-50.752 0-91.896-41.143-91.896-91.896s41.144-91.896 91.896-91.896c50.753 0 91.896 41.144 91.896 91.896 0 50.753-41.143 91.896-91.896 91.896zm35.097-72.488c-1.014 0-2.052-.131-3.082-.407L112.641 201.5a11.808 11.808 0 0 1-8.729-11.396v-59.015c0-6.516 5.287-11.803 11.803-11.803 6.516 0 11.803 5.287 11.803 11.803v49.971l29.614 7.983c6.294 1.698 10.02 8.177 8.322 14.469-1.421 5.264-6.185 8.73-11.388 8.73z" fill="#FFF" /> </svg>
                                 </div>
-                                <h3>Pick up or Delivery</h3>
-                                <p>Get your food delivered! And enjoy your meal! Pay online on pickup or delivery</p>
+                                <h3>Delivery</h3>
+                                <p>Get your food delivered! And enjoy your meal!</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- 3 block sections ends -->
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <p class="pay-info">Pay by Cash on delivery</p>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- How it works block ends -->
-        <!-- Featured restaurants starts -->
-        <section class="featured-restaurants">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="title-block pull-left">
-                            <h4>Featured restaurants</h4> </div>
-                    </div>
-                    <div class="col-sm-8">
-                        <!-- restaurants filter nav starts -->
-                        <div class="restaurants-filter pull-right">
-                            <nav class="primary pull-left">
-                                <ul>
-                                    <li><a href="#" class="selected" data-filter="*">all</a> </li>
-									<?php 
-									// display categories here
-									$res= mysqli_query($db,"select * from res_category");
-									      while($row=mysqli_fetch_array($res))
-										  {
-											echo '<li><a href="#" data-filter=".'.$row['c_name'].'"> '.$row['c_name'].'</a> </li>';
-										  }
-									?>
-                                   
-                                </ul>
-                            </nav>
-                        </div>
-                        <!-- restaurants filter nav ends -->
-                    </div>
-                </div>
-                <!-- restaurants listing starts -->
-                <div class="row">
-                    <div class="restaurant-listing">
-                        
-						
-						<?php  //fetching records from table and filter using html data-filter tag
-						$ress= mysqli_query($db,"select * from restaurant");  
-									      while($rows=mysqli_fetch_array($ress))
-										  {
-													// fetch records from res_category table according to catgory ID
-													$query= mysqli_query($db,"select * from res_category where c_id='".$rows['c_id']."' ");
-													 $rowss=mysqli_fetch_array($query);
-						
-													 echo ' <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant all '.$rowss['c_name'].'">
-														<div class="restaurant-wrap">
-															<div class="row">
-																<div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
-																	<a class="restaurant-logo" href="dishes.php?res_id='.$rows['rs_id'].'" > <img src="admin/Res_img/'.$rows['image'].'" alt="Restaurant logo"> </a>
-																</div>
-																<!--end:col -->
-																<div class="col-xs-12 col-sm-9 col-md-12 col-lg-9">
-																	<h5><a href="dishes.php?res_id='.$rows['rs_id'].'" >'.$rows['title'].'</a></h5> <span>'.$rows['address'].'</span>
-																	<div class="bottom-part">
-																		<div class="cost"><i class="fa fa-check"></i> Min $ 10,00</div>
-																		<div class="mins"><i class="fa fa-motorcycle"></i> 30 min</div>
-																		<div class="ratings"> <span>
-																				<i class="fa fa-star"></i>
-																				<i class="fa fa-star"></i>
-																				<i class="fa fa-star"></i>
-																				<i class="fa fa-star"></i>
-																				<i class="fa fa-star-o"></i>
-																			</span> (122) </div>
-																	</div>
-																</div>
-																<!-- end:col -->
-															</div>
-															<!-- end:row -->
-														</div>
-														<!--end:Restaurant wrap -->
-													</div>';
-										  }
-						
-						
-						?>
-						
-							
-						
-					
-                    </div>
-                </div>
-                <!-- restaurants listing ends -->
-               
-            </div>
-        </section>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
