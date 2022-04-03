@@ -14,7 +14,7 @@ session_start(); //start temp session until logout/browser closed
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Starter Template for Bootstrap</title>
+    <title>869ToGo.com</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -80,7 +80,6 @@ session_start(); //start temp session until logout/browser closed
 
                <h1 style="color:green;font-size:50px;margin-left:45px;margin-right:10px;">Your order has been confirmed.</h1>
                 <h5 style="color:white;margin-left:80px;margin-right:10px;"> Hi, <?php echo  $row["username"] ?> we have received your order No: <?php echo $_SESSION["random_id"]?> and we are working on it now.</h5>
-                <h5 style="color:white;margin-left:150px;margin-right:10px;">We'll email you an update when we've shipped it.</h5>
 <br>
 
                 <form action="your_orders.php"  method="post">

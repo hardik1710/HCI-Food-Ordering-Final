@@ -78,8 +78,8 @@ else{
 							{
 									
 									
-										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">Your Orders</a> </li>';
+									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Logout</a> </li>';
 							}
 
 						?>

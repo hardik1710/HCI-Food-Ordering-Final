@@ -16,23 +16,18 @@ if (empty($_SESSION["user_id"])) {
 
         if ($_POST['submit']) {
 
-            $SQL = "insert into users_orders(u_id,title,quantity,price) values('" . $_SESSION["user_id"] . "','" . $item["title"] . "','" . $item["quantity"] . "','" . $item["price"] . "')";
+            $SQL="insert into users_orders(u_id,title,quantity,price,address,credit_card,credit_month,credit_year,CVV,random_id) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."','".$_POST['naddress']."','".$_POST['ncreditcard']."','".$_POST['ncreditmonth']."','".$_POST['ncredityear']."','".$_POST['nCVV']."','".$_SESSION["random_id"]."')";
 
             mysqli_query($db, $SQL);
 
-            $success = "Thank You! Your Order has been placed successfully!";
+            header("refresh:1;url=confirmation.php");
+			$_SESSION["cart_item"]=null;
             
         }
     }
 
 ?>
 
-<script>
-function orderConfirmed(){
-    alert("Order placed! You can view delivery progress in 'Your Orders'." );
-    document.getElementById("cartForm").reset();
-}
-    </script>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +36,7 @@ function orderConfirmed(){
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="#">
-        <title>Starter Template for Bootstrap</title>
+        <title>869ToGo.com</title>
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -72,8 +67,8 @@ function orderConfirmed(){
                             } else {
 
 
-                                echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
-                                echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
+                                echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">Your Orders</a> </li>';
+                                echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">Logout</a> </li>';
                             }
 
                             ?>
@@ -190,10 +185,6 @@ foreach ($_SESSION["cart_item"] as $item)  // fetch items define current into se
 $item_total += ($item["price"]*$item["quantity"]); // calculating current price into cart
 }
 ?>
-
-
-
-
                                 </div>
                             </div>
 
@@ -216,6 +207,11 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                                                         <h4>Order Summary</h4>
                                                     </div>
                                                     <?php echo $item["title"]; ?><a href="dishes.php?res_id=<?php echo $_GET['res_id']; ?>&action=remove&id=<?php echo $item["d_id"]; ?>">
+                                                     <?php
+$item_total = 0;
+foreach ($_SESSION["cart_item"] as $item)  // fetch items define current into session ID
+{
+?>
                                                         <i class="fa fa-trash pull-right"></i></a>
                                                 </div>
 
@@ -227,8 +223,12 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                                                     <div class="col-xs-4">
                                                         <input class="form-control" type="text" readonly value='<?php echo $item["quantity"]; ?>' id="example-number-input">
                                                     </div>
-
+ <?php
+$item_total += ($item["price"]*$item["quantity"]); // calculating current price into cart
+}
+?>
                                                 </div>
+
                                                 
                                                     <div class="widget clearfix">
 
@@ -260,7 +260,7 @@ $item_total += ($item["price"]*$item["quantity"]); // calculating current price 
                                                                                 </table>
                                                                             </div>
                                                                         </div>
-                                                                        <p class="text-xs-center"> <input type="submit" onClick = orderConfirmed() name="submit" class="btn btn-outline-success btn-block" value="Order now"></p>
+                                                                        <p class="text-xs-center"> <input type="submit" onClick ="return confirm('Are you sure?');" name="submit" class="btn btn-outline-success btn-block" value="Order now"></p>
                                                                         
                                                             </form>
                                                         </div>
