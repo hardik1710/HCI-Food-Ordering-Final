@@ -212,8 +212,87 @@ session_start(); //start temp session until logout/browser closed
                 </div>
                 <!-- 3 block sections ends -->
             </div>
-        </section>
+
         <!-- How it works block ends -->
+           <!-- Featured restaurants ends -->
+            <section class="app-section">
+                <div class="app-wrap">
+                    <div class="container">
+                        <div class="row text-img-block text-xs-left">
+                            <div class="container">
+                                <div class="col-xs-12 col-sm-6 hidden-xs-down right-image text-center">
+                                    <figure> <img src="images/app.png" alt="Right Image"> </figure>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 left-text">
+                                    <h3>The Best Food Delivery App</h3>
+                                    <p>Now you can make food happen pretty much wherever you are thanks to the free easy-to-use Food Delivery App.</p>
+                                    <div class="social-btns">
+                                        <a href="https://www.apple.com/ca/app-store/" class="app-btn apple-button clearfix">
+                                            <div class="pull-left"><i class="fa fa-apple"></i> </div>
+                                            <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">App Store</span> </div>
+                                        </a>
+                                        <a href="https://play.google.com/store" class="app-btn android-button clearfix">
+                                            <div class="pull-left"><i class="fa fa-android"></i> </div>
+                                            <div class="pull-right"> <span class="text">Available on the</span> <span class="text-2">Play store</span> </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+             </section>
+            <!-- start: FOOTER -->
+            <footer class="footer">
+                <div class="container">
+                    <!-- top footer statrs -->
+                    <div class="row top-footer">
+                        <div class="col-xs-12 col-sm-3 footer-logo-block color-gray">
+                            <a href="#"> <img style="background-color:white;" width="110"  height="40" class="img-rounded" src="images/869ToGocom_Logo_PNG-1030x515.png" alt="Footer logo"> </a> </div>
+
+                    </div>
+                    <!-- top footer ends -->
+                    <!-- bottom footer statrs -->
+                    <div class="row bottom-footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-3 payment-options color-gray">
+                                    <h5>Payment Options</h5>
+                                    <ul>
+                                        <li>
+                                            <a href="#"> <img src="images/paypal.png" alt="Paypal"> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <img src="images/mastercard.png" alt="Mastercard"> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <img src="images/maestro.png" alt="Maestro"> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <img src="images/stripe.png" alt="Stripe"> </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> <img src="images/bitcoin.png" alt="Bitcoin"> </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 address color-gray">
+                                    <h5>Address</h5>
+                                    <p>Concept design of oline food order and deliveye,planned as restaurant directory</p>
+                                    <h5>Phone: <a href="#">(+1) 236-568-5987</a></h5> </div>
+                                <div class="col-xs-12 col-sm-5 additional-info color-gray">
+                                    <h5>Addition informations</h5>
+                                    <p>Join the thousands of other restaurants who benefit from having their menus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- bottom footer ends -->
+                </div>
+            </footer>
+            <!-- end:Footer -->
+        </div>
 
 
     <!-- Bootstrap core JavaScript
