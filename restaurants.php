@@ -71,7 +71,7 @@ session_start();
             </div>
             <!-- end:Top links -->
             <!-- start: Inner page hero -->
-            <div class="inner-page-hero bg-image" data-image-src="images/img/res.jpeg">
+            <div class="inner-page-hero bg-image" data-image-src="./images/OIP.jpg">
                 <div class="container"> </div>
                 <!-- end:Container -->
             </div>

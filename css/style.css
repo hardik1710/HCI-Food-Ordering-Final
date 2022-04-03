@@ -2769,7 +2769,7 @@ a[aria-expanded=false] .fa-angle-down {
    /* CSS for Food SEarch Section */
 
    .food-search{
-    background-image: url(../images/img/res.jpeg);
+    background-image: url(../images/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
