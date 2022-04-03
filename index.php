@@ -41,8 +41,8 @@ session_start(); //start temp session until logout/browser closed
 							<?php
 						if(empty($_SESSION["user_id"])) // if user is not login
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active">Login</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active">Signup</a> </li>';
 							}
 						else
 							{
@@ -66,7 +66,7 @@ session_start(); //start temp session until logout/browser closed
             <div class="hero-inner">
                 <div class="container text-center hero-text font-white">
                     <h1>Order Delivery & Take-Out </h1>
-                    <h5 class="font-white space-xs">Find your favourite restaurant</h5>
+                    <h5 class="font-white space-xs">Find your favourite restaurants</h5>
 					<!-- piyush -->
                     <!-- fOOD sEARCH Section Starts Here -->
                     <div class="banner-form">
