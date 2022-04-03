@@ -107,7 +107,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="#">
-    <title>Starter Template for Bootstrap</title>
+    <title>869ToGo.com</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -134,13 +134,13 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 							<?php
 						if(empty($_SESSION["user_id"]))
 							{
-								echo '<li class="nav-item"><a href="login.php" class="nav-link active">login</a> </li>
-							  <li class="nav-item"><a href="registration.php" class="nav-link active">signup</a> </li>';
+
+								echo '<li class="nav-item"><a href="login.php" class="nav-link active">Login</a> </li>
+							  <li class="nav-item"><a href="registration.php" class="nav-link active">Signup</a> </li>';
 							}
 						else
 							{
-									
-									
+
 										echo  '<li class="nav-item"><a href="your_orders.php" class="nav-link active">your orders</a> </li>';
 									echo  '<li class="nav-item"><a href="logout.php" class="nav-link active">logout</a> </li>';
 							}
@@ -154,7 +154,6 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
             <!-- /.navbar -->
          </header>
          <div class="page-wrapper">
-            <div class="breadcrumb">
                <div class="container">
                   <ul>
                      <li><a href="#" class="active">
@@ -166,7 +165,6 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 					</a></li>
                     
                   </ul>
-               </div>
             </div>
             <section class="contact-page inner-page">
                <div class="container">
