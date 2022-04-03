@@ -70,11 +70,6 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
         $message = "CVV Must be = 3";
     }
     else{
-    $_SESSION['address']=$_POST['address'];
-			$_SESSION['credit_card']=$_POST['creditcard'];
-				$_SESSION['credit_month']=$_POST['creditmonth'];
-					$_SESSION['credit_year']=$_POST['credityear'];
-						$_SESSION['CVV']=$_POST['CVV'];
 
 	 //inserting values into db
 	$mql = "INSERT INTO users(username,f_name,l_name,email,phone,password,address,credit_card,credit_month,credit_year,CVV) VALUES('".$_POST['username']."','".$_POST['firstname']."','".$_POST['lastname']."','".$_POST['email']."','".$_POST['phone']."','".md5($_POST['password'])."','".$_POST['address']."','".$_POST['creditcard']."','".$_POST['creditmonth']."','".$_POST['credityear']."','".$_POST['CVV']."')";
@@ -95,7 +90,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 		
 
 
-		 header("refresh:2;url=login.php"); // redireted once inserted success
+		 header("refresh:5;url=login.php"); // redireted once inserted success
     }
 	}
 

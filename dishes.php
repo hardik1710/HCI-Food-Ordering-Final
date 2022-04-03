@@ -13,7 +13,8 @@ if(empty($_SESSION["user_id"]))
 }
 else
 {
-
+                        $query_res= mysqli_query($db,"select * from users where u_id='".$_SESSION['user_id']."'");
+						$row=mysqli_fetch_array($query_res);
 
 												foreach ($_SESSION["cart_item"] as $item)
 												{
@@ -24,7 +25,7 @@ else
 													{
 
 
-            $SQL="insert into users_orders(u_id,title,quantity,price,address,credit_card,credit_month,credit_year,CVV,random_id) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."','".$_SESSION['address']."','".$_SESSION['credit_card']."','".$_SESSION['credit_month']."','".$_SESSION['credit_year']."','".$_SESSION['CVV']."','".$_SESSION["random_id"]."')";
+            $SQL="insert into users_orders(u_id,title,quantity,price,address,credit_card,credit_month,credit_year,CVV,random_id) values('".$_SESSION["user_id"]."','".$item["title"]."','".$item["quantity"]."','".$item["price"]."','".$row['address']."','".$row['credit_card']."','".$row['credit_month']."','".$row['credit_year']."','".$row['CVV']."','".$_SESSION["random_id"]."')";
 
 														mysqli_query($db,$SQL);
 														header("refresh:1;url=confirmation.php");
