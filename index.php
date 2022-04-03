@@ -66,17 +66,17 @@ session_start(); //start temp session until logout/browser closed
             <div class="hero-inner">
                 <div class="container text-center hero-text font-white">
                     <h1>Order Delivery & Take-Out </h1>
-                    <h5 class="font-white space-xs">Find restaurants, specials, and coupons for free</h5>
+                    <h5 class="font-white space-xs">Find your favourite restaurant</h5>
 					<!-- piyush -->
                     <!-- fOOD sEARCH Section Starts Here -->
                     <div class="banner-form">
                         <form class="form-inline" action="restaurant-search.php" method="POST">
                             <div class="form-group">
-                                <label class="sr-only" for="exampleInputAmount">I would like to eat....</label>
+                                <label class="sr-only" for="exampleInputAmount">Search your restaurant....</label>
                                 <div class="form-group">
-                                    <input type="search" name="search" class="form-control form-control-lg" id="exampleInputAmount" placeholder="I would like to eat...."> </div>
+                                    <input type="search" name ="search" class="form-control form-control-lg" id="exampleInputAmount" placeholder="Search your restaurant...." required> </div>
                             </div>
-							<input type="submit" name="submit" value="Search food" class="btn theme-btn btn-lg">
+                            <input type="submit" name="submit" value="Search" class="btn theme-btn btn-lg">    
                         </form>
                     </div>
 					<!-- fOOD sEARCH Section Ends Here -->

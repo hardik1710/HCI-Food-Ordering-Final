@@ -265,28 +265,17 @@ only screen and (max-width: 760px),
 																			{
 																			?>
 																			<button type="button" class="btn btn-info" style="font-weight:bold;">Dispatch</button>
+                                                                           <?php $sql=mysqli_query($db,"update users_orders set status='closed' "); ?>
 																		   <?php 
 																			  }
-																			   if($status=="in process")
-																			 { ?>
-																				<button type="button" class="btn btn-warning"><span class="fa fa-cog fa-spin"  aria-hidden="true" ></span>On the Way!</button>
-																			<?php
-																				}
-																			if($status=="closed")
+																			else if($status=="closed")
 																				{
 																			?>
 																			 <button type="button" class="btn btn-success" ><span  class="fa fa-check-circle" aria-hidden="true">Delivered</button> 
 																			<?php 
 																			} 
 																			?>
-																			<?php
-																			if($status=="rejected")
-																				{
-																			?>
-																			 <button type="button" class="btn btn-danger"> <i class="fa fa-close"></i>Cancelled</button>
-																			<?php 
-																			} 
-																			?>
+																			
 														   
 														   
 														   

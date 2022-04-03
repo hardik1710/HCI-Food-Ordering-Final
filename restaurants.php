@@ -126,8 +126,8 @@ session_start();
 													$query= mysqli_query($db,"select * from res_category where c_id='".$rows['c_id']."' ");
 													 $rowss=mysqli_fetch_array($query);
 						
-													 echo ' <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant all '.$rowss['c_name'].'">
-														<div class="restaurant-wrap">
+													 echo ' <div class="col-xs-12 col-sm-12 col-md-6 single-restaurant all '.$rowss['c_name'].'" >
+														<div class="restaurant-wrap" style="height:150px">
 															<div class="row">
 																<div class="col-xs-12 col-sm-3 col-md-12 col-lg-3 text-xs-center">
 																	<a class="restaurant-logo" href="dishes.php?res_id='.$rows['rs_id'].'" > <img width="500" height="500" src="admin/Res_img/'.$rows['image'].'" alt="Restaurant logo"> </a>
