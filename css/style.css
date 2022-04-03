@@ -1192,6 +1192,7 @@ Steps
     background: #fafaf8;
     float: left;
     width: 100%;
+    height: 150px;
 }
 
 .featured-restaurants .restaurant-logo {
@@ -1210,7 +1211,7 @@ Steps
     }
     .featured-restaurants .restaurant-logo img {
         width: 85px;
-        margin-bottom: 15px;
+        margin-bottom: 55px;
     }
 }
 
@@ -1953,7 +1954,7 @@ a.more-link {
 
 .menu-widget .food-item .restaurant-logo {
     max-width: 100px;
-    height: auto;
+    height: 100px;
     display: block;
 }
 
@@ -2040,7 +2041,8 @@ a.more-link {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {}
+@media (min-width: 992px) and (max-width: 1199px) {
+width:70%}
 
 @media (min-width: 1200px) {}
 
@@ -2769,7 +2771,7 @@ a[aria-expanded=false] .fa-angle-down {
    /* CSS for Food SEarch Section */
 
    .food-search{
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/img/res.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
