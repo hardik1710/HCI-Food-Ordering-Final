@@ -8,7 +8,7 @@ This project is about ordering online food from your local restaurants. Anybody 
 
 ## Installation or Demo
 
-Just create new database in phpmyadmin and import SQL file which is located in `SQL/` directory.
+Just create new database in phpmyadmin and import SQL file which is located in `SQL/` directory. First, install WAMP Server(Other alternatives as well). Then, inside the 'wamp' folder, place the downloaded project file inside the 'www/' directory. Finally, you can create the virtualhost inside the wamp server application. Then, you are good to go!
 
 ## Technologies Used
 
