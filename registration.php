@@ -19,7 +19,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
         empty($_POST['credityear']) ||
         empty($_POST['CVV']))
 		{
-			$message = "All fields must be Required!";
+			$message = "*All fields must be Required!";
 		}
 	else
 	{
@@ -30,44 +30,44 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 
 	
 	if($_POST['password'] != $_POST['cpassword']){  //matching passwords
-       	$message = "Password not match";
+       	$message = "*Password not match";
     }
 	elseif(strlen($_POST['password']) < 6)  //cal password length
 	{
-		$message = "Password Must be >=6";
+		$message = "*Password Must be >=6";
 	}
 	elseif(strlen($_POST['phone']) < 10)  //cal phone length
 	{
-		$message = "invalid phone number!";
+		$message = "*Invalid phone number!";
 	}
 
     elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) // Validate email address
     {
-       	$message = "Invalid email address please type a valid email!";
+       	$message = "*Invalid email address please type a valid email!";
     }
 	elseif(mysqli_num_rows($check_username) > 0)  //check username
      {
-    	$message = 'username Already exists!';
+    	$message = '*Username already exists!';
      }
 	elseif(mysqli_num_rows($check_email) > 0) //check email
      {
-    	$message = 'Email Already exists!';
+    	$message = '*Email Already exists!';
      }
     elseif(strlen($_POST['creditcard']) != 16)  //credit card password length
     {
-        $message = "credit card number Must be = 16";
+        $message = "*Credit card number Must be = 16";
     }
     elseif(strlen($_POST['creditmonth']) != 2)  //credit card password length
     {
-        $message = "creditmonth Must be = 2";
+        $message = "*Creditmonth Must be = 2";
     }
     elseif(strlen($_POST['credityear']) != 2)  //credit card password length
     {
-        $message = "credityear Must be = 2";
+        $message = "*Credityear must be = 2";
     }
     elseif(strlen($_POST['CVV']) != 3)  //credit card password length
     {
-        $message = "CVV Must be = 3";
+        $message = "*CVV Must be = 3";
     }
     else{
 
@@ -158,11 +158,7 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                <div class="container">
                   <ul>
                      <li><a href="#" class="active">
-					  <span style="color:red;"><?php echo $message; ?></span>
-					   <span style="color:green;">
-								<?php echo $success; ?>
-										</span>
-					   
+
 					</a></li>
                     
                   </ul>
@@ -178,36 +174,40 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
                              <h2 style="color:#f30 ;text-align:center">REGISTER</h2>
 							  <form action="" method="post">
                                  <div class="row">
+                                           <span style="color:red;font-size:20px,text-align:center;"><?php echo $message; ?></span>
+					   <span style="color:green;font-size:20px,text-align:center;">
+								<?php echo $success; ?>
+										</span>
 								  <div class="form-group col-sm-12">
-                                       <label for="exampleInputEmail1">User-Name</label>
+                                       <label for="exampleInputEmail1">User-Name<span class="required" style="color:red">*</span></label>
                                        <input class="form-control" type="text" name="username" id="example-text-input" placeholder="UserName"> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">First Name</label>
+                                       <label for="exampleInputEmail1">First Name<span class="required" style="color:red">*</span></label>
                                        <input class="form-control" type="text" name="firstname" id="example-text-input" placeholder="First Name"> 
                                     </div>
                                     <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Last Name</label>
+                                       <label for="exampleInputEmail1">Last Name<span class="required" style="color:red">*</span></label>
                                        <input class="form-control" type="text" name="lastname" id="example-text-input-2" placeholder="Last Name"> 
                                     </div>
                                      <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Email address</label>
+                                       <label for="exampleInputEmail1">Email address<span class="required" style="color:red">*</span></label>
                                        <input type="text" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small> 
                                      </div>
                                      <div class="form-group col-sm-6">
-                                       <label for="exampleInputEmail1">Phone number</label>
+                                       <label for="exampleInputEmail1">Phone number<span class="required" style="color:red">*</span></label>
                                        <input class="form-control" type="text" name="phone" id="example-tel-input-3" placeholder="Phone"> <small class="form-text text-muted">We"ll never share your phone number with anyone else.</small>
                                      </div>
                                      <div class="form-group col-sm-6">
-                                       <label for="exampleInputPassword1">Password</label>
+                                       <label for="exampleInputPassword1">Password<span class="required" style="color:red">*</span></label>
                                        <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password"> 
                                      </div>
                                      <div class="form-group col-sm-6">
-                                       <label for="exampleInputPassword1">Repeat password</label>
+                                       <label for="exampleInputPassword1">Repeat password<span class="required" style="color:red">*</span></label>
                                        <input type="password" class="form-control" name="cpassword" id="exampleInputPassword2" placeholder="Password"> 
                                      </div>
                                      <div class="form-group col-sm-12">
-                                       <label for="exampleTextarea">Delivery Address</label>
+                                       <label for="exampleTextarea">Delivery Address<span class="required" style="color:red">*</span></label>
                                        <textarea class="form-control" id="exampleTextarea"  name="address" rows="3"></textarea>
                                      </div>
                                      <div class="form-group col-sm-12">
@@ -216,19 +216,19 @@ if(isset($_POST['submit'] )) //if submit btn is pressed
 
                                      </div>
                                      <div class="form-group col-sm-12">
-                                         <label for="exampleTextarea">Payment</label>
+                                         <label for="exampleTextarea">Payment<span class="required" style="color:red">*</span></label>
                                          <input class="form-control" type="text" name="creditcard" id="example-text-input"   placeholder="Credit Card Number">
                                      </div>
                                      <div class="form-group col-sm-4">
-                                         <label for="exampleInputEmail1">Month</label>
+                                         <label for="exampleInputEmail1">Month<span class="required" style="color:red">*</span></label>
                                          <input class="form-control" type="text" name="creditmonth" id="example-text-input" placeholder="Month (2 digits)">
                                      </div>
                                      <div class="form-group col-sm-4">
-                                         <label for="exampleInputEmail1">Year</label>
+                                         <label for="exampleInputEmail1">Year<span class="required" style="color:red">*</span></label>
                                          <input class="form-control" type="text" name="credityear" id="example-text-input" placeholder="Year (2 digits)">
                                      </div>
                                      <div class="form-group col-sm-4">
-                                         <label for="exampleInputEmail1">CVV</label>
+                                         <label for="exampleInputEmail1">CVV<span class="required" style="color:red">*</span></label>
                                          <input class="form-control" type="text" name="CVV" id="example-text-input" placeholder="CVV (3 digits)">
                                      </div>
                                  </div>
